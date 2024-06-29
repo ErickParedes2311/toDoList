@@ -80,6 +80,7 @@ function contenedorNotas()
                                                 lineaActiva = false;
                                         }else{
                                                 spanTexto.style.textDecoration = 'none';
+                                                spanTexto.style.opacity = '1';
                                                 lineaActiva = true;
                                         }
                                 })

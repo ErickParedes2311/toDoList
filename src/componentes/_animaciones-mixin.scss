@@ -1,3 +1,4 @@
+@import 'variables';
 @mixin centrar($horizontal: center, $vertical: center, $direccion, $espacio)
         {
                 display: flex;
@@ -55,10 +56,9 @@ $rotacionCompleta:  rotacionCompleta 0.6s linear both;
                       100% {transform: scale(1) rotateZ(360deg)}
               }
 
-$intermitente: intermitente 1s ease-in-out infinite alternate;
+$intermitente: intermitente 2s ease-in-out infinite alternate;
 @keyframes intermitente
               {
-                      // animation: intermitente 2s ease-in-out infinite alternate;
                       from {text-shadow: 0 0 20px $Principal-c;}
                       to {text-shadow: 0 0 30px $Principal-c, 0 0 10px $Principal-c;}
               }

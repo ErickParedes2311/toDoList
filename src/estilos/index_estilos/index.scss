@@ -32,12 +32,6 @@
                                 .text_note
                                 {
                                         border: 1px solid hsla(0, 0%, 100%, 0.5);
-                                        box-shadow: 0px 0px 5px white;
-                                        &:hover
-                                        {
-                                                box-shadow: 0px 0px 5px 2px $Principal-c-t;
-
-                                        }
                                 }
                                 .btn_color
                                         {
@@ -60,20 +54,20 @@ body
                 position: relative;
                 display: flex;
                 flex-direction: column;
-                padding: 10px;
         }
 
 .ventana_alert
         {
-                width: 100%;
-                height: max-content;
-                background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+                width: 100vw;
+                background: $Principal-c;
+                box-shadow: 0px 0px 10px 1px $Principal-c-t;
                 position: absolute;
                 bottom: 0;
                 text-align: center;
-                padding: 5px;
+                padding: 5px 0;
                 overflow: hidden;
                 font-weight: 600;
+                color: white;
                 p{
                         position: relative;
                         animation: $izquierda;
@@ -95,18 +89,16 @@ body
                 padding-bottom: 30px;
                 @include centrar(center, center, row, 10px);
                 border-bottom: 1px solid black;
+                padding: 0  10px 20px;
                 .text_note
                         {
                                 width: 500px;
-                                border: 1px solid hsla(0, 0%, 13%, 0.5);
-                                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+                                border: 1px solid hsl(0, 0%, 0%);
                                 padding: 7px;
                                 border-radius: 5px;
                                 &:hover, &:focus
                                 {
-                                        border: 1px solid $Principal-c-t;
-                                        box-shadow: 0px 0px 5px 2px $Principal-c-t;
-
+                                        border: 1px solid $Principal-c;
                                 }
                         }
                 .btn_color
