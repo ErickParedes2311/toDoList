@@ -1,0 +1,143 @@
+Arquitectura basica de html
+<body>
+    <header>
+        <h1>Mi Página Web</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#acerca">Acerca</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido</h2>
+            <p>Contenido de inicio.</p>
+        </section>
+        <section id="acerca">
+            <h2>Acerca de Nosotros</h2>
+            <p>Información sobre la página.</p>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form>
+                <!-- Formulario de contacto -->
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mi Página Web</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Como conectarse a otra oja
+        <script>
+                        function loadNav() {
+                                fetch('/NAV/nav.html')
+                                        .then(response => response.text())
+                                        .then(data => 
+                                        {
+                                                const navPlaceholder = document.getElementById('nav-placeholder');
+                                                        navPlaceholder.innerHTML = data;
+                                                const script = document.createElement('script');
+                                                        script.src = '/NAV/nav.js'; // Asegúrate de que la ruta sea correcta
+                                                document.body.appendChild(script);
+
+                                });
+                        
+                                fetch('/pie-de-pagina/pie-de-pagina.html')
+                                .then(response => response.text())
+                                .then(data => 
+                                {
+                                        const navPlaceholder = document.getElementById('pie-pagina');
+                                                navPlaceholder.innerHTML = data;
+                                        const script = document.createElement('script');
+                                                script.src = '/pie-de-pagina/pie-de-pagina.js'; // Asegúrate de que la ruta sea correcta
+                                        document.body.appendChild(script);
+
+                                });
+                        }
+                        document.addEventListener("DOMContentLoaded", loadNav);
+        </script>
+</head>
+<body onload="loadNav()">
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Letras que son interesantes
+{
+    ----> recomendado
+            /* montserrat-latin-wght-normal */ poner en el principio de todo
+                    @font-face 
+                        {
+                            font-family: 'Montserrat Variable';
+                            font-style: normal;
+                            font-display: swap;
+                            font-weight: 100 900;
+                            src: url(https://cdn.jsdelivr.net/fontsource/fonts/montserrat:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+                            unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+                        }   
+            Codigo css = font-family: 'Montserrat Variable';  font-weight: 800;
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ----->  Mas redonda y limpia
+                /* comfortaa-latin-wght-normal */
+                    @font-face {
+                    font-family: 'Comfortaa Variable';
+                    font-style: normal;
+                    font-display: swap;
+                    font-weight: 300 700;
+                    src: url(https://cdn.jsdelivr.net/fontsource/fonts/comfortaa:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+                    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+                    }
+                Codigo css = font-family: 'Comfortaa Variable';  font-weight: 800;
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    ------> 
+                codigo html =  
+                                    <link rel="preconnect" href="https://fonts.googleapis.com">     
+                                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                                    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+                
+                codigo css = $letra-principal: "Quicksand";
+}
+
+{ animaciones
+        $derecha-izquierda: derecha-izquierda 1s ease;
+        @keyframes derecha-izquierda
+                {
+                        50% {left: 90%;}
+                        100% {left: 0;}
+            }
+
+        $rotacionCompleta:  rotacionCompleta 0.6s linear both;
+        @keyframes rotacionCompleta
+                    {
+                            0% {transform: scale(1) rotateZ(0)}
+                            50% {transform: scale(2) rotateZ(180deg)}
+                            100% {transform: scale(1) rotateZ(360deg)}
+                    }
+
+        $intermitente: intermitente 1s ease-in-out infinite alternate;
+        @keyframes intermitente
+                    {
+                            // animation: intermitente 2s ease-in-out infinite alternate;
+                            from {text-shadow: 0 0 20px $Principal-c;}
+                            to {text-shadow: 0 0 30px $Principal-c, 0 0 10px $Principal-c-t;}
+                    }
+}
+
+
+
+// completado.addEventListener('click', () =>
+//         {
+//                  if(lineaActiva === true){
+//                         textoNotas.style.textDecoration = 'line-through';
+//                         lineaActiva = false;
+//                 }else{
+//                         textoNotas.style.textDecoration = 'none';
+//                         lineaActiva = true;
+//                 }
+//         });

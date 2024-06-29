@@ -1,0 +1,64 @@
+@mixin centrar($horizontal: center, $vertical: center, $direccion, $espacio)
+        {
+                display: flex;
+                gap: $espacio;
+                flex-direction: $direccion;
+                @if $horizontal == center and $vertical == center
+                        {
+                                justify-content: center;
+                                align-items: center;
+                        }
+                @else if $horizontal == center
+                        {
+                                justify-content: center;
+                        }
+                @else if $vertical == center
+                        {
+                                align-items: center;
+                        }
+        }
+
+@mixin responsive-letras($min-size, $max-size)
+        {
+                transition: all 0.3s ease;
+                font-size: $min-size;
+                @media (min-width: 768px)
+                        {
+                                font-size: $max-size;
+                        }
+        }
+
+@mixin alto-fijo($ancho : 100%, $alto : 100%)
+        {
+                width: $ancho;
+                height: $alto;
+        }
+$derecha-izquierda: derecha-izquierda 1s ease;
+@keyframes derecha-izquierda
+        {
+                50% {left: 90%;}
+                100% {left: 0;}
+      }
+
+$izquierda: izquierda 1s ease;
+@keyframes izquierda
+        {
+                0% {right: -7%;}
+                100% {right: 0;}
+      }
+
+$rotacionCompleta:  rotacionCompleta 0.6s linear both;
+@keyframes rotacionCompleta
+              {
+                      0% {transform: scale(1) rotateZ(0)}
+                      50% {transform: scale(2) rotateZ(180deg)}
+                      100% {transform: scale(1) rotateZ(360deg)}
+              }
+
+$intermitente: intermitente 1s ease-in-out infinite alternate;
+@keyframes intermitente
+              {
+                      // animation: intermitente 2s ease-in-out infinite alternate;
+                      from {text-shadow: 0 0 20px $Principal-c;}
+                      to {text-shadow: 0 0 30px $Principal-c, 0 0 10px $Principal-c;}
+              }

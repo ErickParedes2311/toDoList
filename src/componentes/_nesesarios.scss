@@ -1,0 +1,90 @@
+@import 'variables';
+
+/* Formateo de Codigo*/
+*
+        {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: $letra-principal;
+                font-optical-sizing: lighter;
+                list-style-type: none;
+                text-decoration: none;
+                border: none;
+                outline: none;
+        };
+
+html
+        {
+                scroll-behavior: smooth; /*Mas suabe la animacion de la carga*/
+        }
+
+h1, h2, h3, h4, h5, h6, p, span, a,  strong, blockquote, i, b, u, em
+        {
+                font-size: 1em;
+                font-weight: inherit;
+                font-style: inherit;
+                text-decoration: none;
+                color: inherit;
+        }
+
+img, video, iframe, figure
+        {
+                max-width: 100%;
+                width: 100%;
+                display: block;
+                /*opcional*/ object-fit: cover;
+                /*opcional*/  object-position: center center;
+        };
+
+/*Evitamos problemas con el pseudoelemtos de quotes*/
+blockquote::before, blockquote::after,  q::before,  q::after
+        {
+                content: ' ';
+                content: none;
+        }
+
+/*Configuracion del texto que seleccionamos*/
+::selection 
+        {
+                background-color: $Principal-c;
+                color: $Secundario-c;
+        };
+
+form, input, textarea, select, button, label
+        {
+                font-family: inherit;
+                font-size: inherit;
+                // hyphens: auto; /*Error en diferentes SO*/
+                background-color: transparent;
+                display: block;
+                color: inherit;
+                // /*opcional*/  appearance: none;
+        }
+ /*Reseteamos las  Tablas*/
+table, tr, td 
+        {
+                border-collapse: collapse;
+                border-spacing: 0;
+        }
+/*Prolemas con el svg*/
+svg
+        {
+                width: 100%;
+                display: block;
+                fill: currentColor;
+        }
+
+/*Tipografia de la web*/
+body
+        {
+                min-height: 100vh;
+                font-size: 100%;
+                // font-family: $tipo-letras;
+                color: $Principal-c;
+                /*opcional*/ line-height: 1.4em;
+                /*opcional*/  font-smooth: always; /*No es soportado en algunos SO*/
+                /*opcional*/ -webkit-font-smoothing: antialiased; /*No es soportado en algunos SO*/
+                /*opcional*/ -moz-osx-font-smoothing: grayscale; /*No es soportado en algunos SO*/
+        }
+
