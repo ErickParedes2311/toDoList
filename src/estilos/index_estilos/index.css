@@ -163,13 +163,13 @@ body {
   color: rgb(14, 14, 14);
 }
 .fondo_claro .content_controles {
-  border-bottom: 1px solid rgb(14, 14, 14);
+  border-bottom: 1px solid rgba(14, 14, 14, 0.35);
 }
 .fondo_claro .content_controles .btn_color .luna {
   display: none;
 }
 .fondo_claro .notas .nt {
-  border-bottom: 1px solid rgb(14, 14, 14);
+  border-bottom: 1px solid rgba(14, 14, 14, 0.35);
 }
 
 .fondo_oscuro {
@@ -177,7 +177,7 @@ body {
   color: rgb(255, 255, 255);
 }
 .fondo_oscuro .content_controles {
-  border-bottom: 1px solid rgb(241, 241, 241);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 .fondo_oscuro .content_controles .text_note {
   border: 1px solid hsla(0, 0%, 100%, 0.5);
@@ -186,7 +186,7 @@ body {
   display: none;
 }
 .fondo_oscuro .notas .nt {
-  border-bottom: 1px solid rgb(241, 241, 241);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 body {
@@ -215,7 +215,7 @@ body {
 
 .titulo_principal {
   transition: all 0.3s ease;
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-weight: 700;
   margin: 30px auto;
   animation: intermitente;
@@ -235,7 +235,6 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid black;
   padding: 0 10px 20px;
 }
 .content_controles .text_note {
@@ -245,7 +244,7 @@ body {
   border-radius: 5px;
 }
 .content_controles .text_note:hover, .content_controles .text_note:focus {
-  border: 1px solid #0077b2;
+  border: 1.5px solid #0077b2;
 }
 .content_controles .btn_color {
   background-color: #0077b2;
@@ -299,10 +298,4 @@ body {
 }
 .notas .nt .content_btn #btn_completado_id {
   background-color: #0077b2;
-}
-.notas .nt .linea_completa {
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background-color: #ffffff;
 }/*# sourceMappingURL=index.css.map */

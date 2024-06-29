@@ -10,11 +10,12 @@ $letra-principal: "Montserrat Variable";
 
 /*Fondo Claro*/
 $fondo-claro: rgb(241, 241, 241);
+$fondo-claro-t: #ffffff66;
 $txt-fondo-claro: black;
 
 /*Fondo OScuro*/
 $fondo-oscuro: rgb(14, 14, 14);
-$fondo-oscuro-t: rgb(22, 22, 22);
+$fondo-oscuro-t: rgb(14 14 14 / 35%);
 $xt-fondo-oscuro: rgb(255, 255, 255);
 
 @font-face 

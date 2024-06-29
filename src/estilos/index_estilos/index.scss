@@ -7,7 +7,7 @@
                 color: $fondo-oscuro;
                 .content_controles
                         {
-                                border-bottom: 1px solid $fondo-oscuro;
+                                border-bottom: 1px solid $fondo-oscuro-t;
                                 .btn_color
                                         {
                                                 .luna{display: none;}
@@ -17,7 +17,7 @@
                         {
                                 .nt
                                         {
-                                                border-bottom: 1px solid $fondo-oscuro;
+                                                border-bottom: 1px solid $fondo-oscuro-t;
                                         }
                         }
         }
@@ -28,7 +28,7 @@
                 color: $xt-fondo-oscuro;
                 .content_controles
                         {
-                                border-bottom: 1px solid $fondo-claro;
+                                border-bottom: 1px solid $fondo-claro-t;
                                 .text_note
                                 {
                                         border: 1px solid hsla(0, 0%, 100%, 0.5);
@@ -42,7 +42,7 @@
                         {
                                 .nt
                                         {
-                                                border-bottom: 1px solid $fondo-claro;
+                                                border-bottom: 1px solid $fondo-claro-t;
                                         }
                         }
                 
@@ -76,7 +76,7 @@ body
 
 .titulo_principal
         {
-                 @include responsive-letras(1.5em, 2em);
+                 @include responsive-letras(1.7em, 2em);
                 font-weight: 700;
                 margin: 30px auto;
                 animation: intermitente;
@@ -88,7 +88,6 @@ body
                 margin: 0px auto;
                 padding-bottom: 30px;
                 @include centrar(center, center, row, 10px);
-                border-bottom: 1px solid black;
                 padding: 0  10px 20px;
                 .text_note
                         {
@@ -98,7 +97,7 @@ body
                                 border-radius: 5px;
                                 &:hover, &:focus
                                 {
-                                        border: 1px solid $Principal-c;
+                                        border: 1.5px solid $Principal-c;
                                 }
                         }
                 .btn_color
@@ -154,13 +153,6 @@ body
                                                         {
                                                                 background-color: $Principal-c;
                                                         }
-                                        }
-                                .linea_completa
-                                        {
-                                                position: absolute;
-                                                width: 100%;
-                                                height: 1px;
-                                                background-color: #ffffff;
                                         }
                         }
         }
